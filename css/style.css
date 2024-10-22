@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.topo{
+    background-color: rgb(103, 148, 54);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle {
+    margin: 30px;
+    width: 300px;       /* Define a largura do círculo */
+    height: 300px;      /* Define a altura do círculo (mesma da largura) */
+    border-radius: 50%; /* Faz com que o contêiner se torne um círculo */
+    overflow: hidden;   /* Garante que a imagem fora do círculo seja cortada */
+    display: flex;      /* Centraliza a imagem dentro do círculo */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle img {
+    width: 100%;        /* Ajusta a imagem para caber no círculo */
+    height: 100%;       /* Garante que a imagem preencha o círculo */
+    object-fit: cover;  /* Mantém a proporção da imagem e corta o excesso */
+  }
+
+  .container{
+    width: 100%;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(165, 190, 0);
+    color: rgb(235, 242, 250);
+  }
+
+  .container2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(6, 71, 137);
+    background-color: rgb(235, 242, 250);
+  }
+  .container4{
+    width: 100%;
+    height: 100px;
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(235, 242, 250);
+    background-color: rgb(66, 122, 161);
+  }
+
+  .container3{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: rgb(235, 242, 250);
+    background-color: rgb(6, 71, 137);
+  }
+
+.paragrafo{
+    display: flex;
+text-align: center;
+    gap:20px;
+    font-size:10px;
+    align-items: center;
+}
+
+.paragrafo p{
+    font-size: 20px;
+    width: 60%; /* Limita a largura do parágrafo para que o texto quebre em várias linhas */
+    line-height: 1.6; 
+    text-align: center;
+}
+
+.contcards{
+    width: 95%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+   
+    background-color: rgb(235, 242, 250);
+    height: 40%;
+    margin: 21px;
+    border: 1px solid #ccc; /* Borda para visualização */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cards1{
+    display: flex;
+    flex-direction: row;
+
+    height: 40%;
+    margin: 21px;
+    border: 1px solid #ccc; /* Borda para visualização */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subcont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo{
+    font-size: 100px;
+}
+.titulo2{
+    margin-left: 13px;
+    font-size: 21px;
+}
+  
