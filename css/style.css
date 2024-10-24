@@ -1,108 +1,50 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+@import url(./global.css);
+@import url(./containers.css);
+@import url(./footer.css);
 
-.topo{
-    background-color: rgb(103, 148, 54);
+  .fullscreen-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.circle {
-    margin: 30px;
-    width: 300px;       /* Define a largura do círculo */
-    height: 300px;      /* Define a altura do círculo (mesma da largura) */
-    border-radius: 50%; /* Faz com que o contêiner se torne um círculo */
-    overflow: hidden;   /* Garante que a imagem fora do círculo seja cortada */
-    display: flex;      /* Centraliza a imagem dentro do círculo */
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    background-image: url('../img/nuvens.jpeg'); /* Caminho da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Fica atrás do texto */
   }
   
-  .circle img {
-    width: 100%;        /* Ajusta a imagem para caber no círculo */
-    height: 100%;       /* Garante que a imagem preencha o círculo */
-    object-fit: cover;  /* Mantém a proporção da imagem e corta o excesso */
+  /* Texto que revela a imagem de fundo */
+  .text-reveal {
+    font-size: 7rem;
+    font-weight: bold;
+    font-weight: 650;
+    font-family: 'Montserrat', sans-serif;
+    color: transparent; /* Deixa o texto invisível */
+    background-image: url('../img/nuvens.jpeg'); /* A mesma imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text; /* Clipa o fundo ao texto */
+    background-clip: text;
+    z-index: 1; /* O texto fica sobreposto */
+    position: relative;
+
   }
-
-  .container{
-    width: 100%;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(165, 190, 0);
-    color: rgb(235, 242, 250);
-  }
-
-  .container2{
-    width: 100%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: rgb(6, 71, 137);
-    background-color: rgb(235, 242, 250);
-  }
-  .container4{
-    width: 100%;
-    height: 100px;
-    display: flex;
-  flex-direction: column;
-    align-items: center;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: rgb(235, 242, 250);
-    background-color: rgb(66, 122, 161);
-  }
-
-  .container3{
-    width: 100%;
-    height: 1000px;
-    display: flex;
-    flex-direction: column;
-justify-content: center;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    color: rgb(235, 242, 250);
-    background-color: rgb(6, 71, 137);
-  }
-
+  
 .paragrafo{
     display: flex;
-text-align: center;
+    text-align: center;
     gap:20px;
     font-size:10px;
     align-items: center;
-}
-
-.paragrafo p{
-    font-size: 20px;
-    width: 60%; /* Limita a largura do parágrafo para que o texto quebre em várias linhas */
-    line-height: 1.6; 
-    text-align: center;
-}
-
-.contcards{
-    width: 95%;
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    
- 
 }
 
 .cards{
     display: flex;
     flex-direction: column;
    
+    /* background-color: rgb(235, 242, 250); */
     background-color: rgb(235, 242, 250);
     height: 40%;
     margin: 21px;
@@ -119,17 +61,73 @@ text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.subcont{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 .titulo{
     font-size: 100px;
+    color: white;
 }
+
 .titulo2{
     margin-left: 13px;
-    font-size: 21px;
+    font-size: 1.2rem;
 }
   
+.projects-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: rgb(6, 71, 137);
+  font-family: Montserrat, serif;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0056b3;
+  font-family: Montserrat, serif;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+  font-family: Lato, serif;
+}

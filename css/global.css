@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.circle {
+    margin: 30px;
+    width: 300px;       /* Define a largura do círculo */
+    height: 300px;      /* Define a altura do círculo (mesma da largura) */
+    border-radius: 50%; /* Faz com que o contêiner se torne um círculo */
+    overflow: hidden;   /* Garante que a imagem fora do círculo seja cortada */
+    display: flex;      /* Centraliza a imagem dentro do círculo */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle img {
+    width: 100%;        /* Ajusta a imagem para caber no círculo */
+    height: 100%;       /* Garante que a imagem preencha o círculo */
+    object-fit: cover;  /* Mantém a proporção da imagem e corta o excesso */
+  }
+
+  .paragrafo p{
+    font-size: 20px;
+    width: 60%; /* Limita a largura do parágrafo para que o texto quebre em várias linhas */
+    line-height: 1.6; 
+    text-align: center;
+}
